@@ -1,4 +1,4 @@
-# Coinkite API Code for PHP
+# Coinkite API Code for Javascript / Node.js
 
 [Learn more about Coinkite's API here.](https://doc.coinkite.com/)
 and visit the [Coinkite Main Site](https://coinkite.com/) to open your
@@ -7,10 +7,10 @@ account today!
 ## Introduction
 
 Every request made to the Coinkite API requires three special header
-lines. This code can generate the timestamp and signature values for
-all the headers.
+lines. This code can generate the timestamp and signature values that
+you will need.
 
-Header lines you need:
+Example header lines:
 
 	X-CK-Key: K5555a555-55a555aa-a55aa5a5555aaa5a
 	X-CK-Timestamp: 2014-06-23T03:10:04.905376
@@ -47,7 +47,8 @@ In the `HEAD` of your HTML, include the javascript libary from:
 And the `coinkite-api.js` file after that.
 
 Then, make sure that all your HTTP calls to Coinkite's API have the extra
-headers supplied from `auth_headers`.
+headers supplied from `auth_headers`. You need to use a hook in jQuery or
+whatever library you are using to do your REST calls.
 
 A more complete example can be found in our 
 [Angular Coinkite API example](https://github.com/coinkite/coinkite-angular)
