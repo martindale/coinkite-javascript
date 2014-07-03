@@ -26,6 +26,9 @@
 			return {};
 		}
 
+		// ignore query string stuff.
+		endpoint = endpoint.split('?')[0];
+
 		var ts = force_ts || (new Date()).toISOString(); 
 		var data = endpoint + '|' + ts;
 
